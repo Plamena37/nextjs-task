@@ -15,6 +15,10 @@ export const StyledContainer = styled(({ height, ...props }) => (
   background-position: left;
   background-repeat: no-repeat;
   background-size: 87%;
+
+  @media (max-width: 1024px) {
+    background: none;
+  }
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
@@ -46,6 +50,20 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   text-align: center;
 `;
 
+export const StyledContentContainer = styled(({ height, ...props }) => (
+  <SectionContainer {...props} />
+))`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  align-items: center;
+  margin-block: 3rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 export const StyledImageContainer = styled(({ ...props }) => (
   <div {...props} />
 ))`
@@ -57,7 +75,7 @@ export const StyledImageContainer = styled(({ ...props }) => (
   margin-block: auto;
 
   @media (max-width: 1024px) {
-    margin: unset;
+    justify-self: center;
   }
 `;
 
@@ -71,20 +89,8 @@ export const StyledCardContainer = styled(({ height, ...props }) => (
   height: 100%;
 
   @media (max-width: 1024px) {
-    width: 100%;
-  }
-`;
-
-export const StyledContentContainer = styled(({ height, ...props }) => (
-  <SectionContainer {...props} />
-))`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 5rem;
-  align-items: center;
-  margin-block: 3rem;
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
+    justify-self: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
   }
 `;

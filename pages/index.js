@@ -1,10 +1,73 @@
-import { Hero } from "../sections";
+import { Hero, Agency } from "../sections";
 
 const heroProps = {
   image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
   title: "Agency procurement, outsourced.",
   description: "Start the process here",
   ctaText: "Start",
+};
+
+const agencyProps = {
+  bgImage: {
+    src: "/img/background.png",
+    alt: "Background",
+    width: 326,
+    height: 520,
+  },
+  title: "Managed agency selection",
+  subTitle: "Strengthen your onboarding process",
+  videoImg: {
+    src: "/img/video.png",
+    alt: "",
+    width: 2000,
+    height: 3100,
+  },
+  cards: [
+    {
+      image: { src: "/img/cardBriefImg.png", alt: "", width: 65, height: 65 },
+      title: "Brief",
+      description: (
+        <p>
+          Complete <strong> brief writing and or simple guidance </strong> on
+          what to include, we&apos;ve got you coverted.
+        </p>
+      ),
+      bgColor: "#f9f9f9",
+      width: "55%",
+      isSelected: false,
+    },
+    {
+      image: {
+        src: "/img/cardSearchImg.png",
+        alt: "",
+        width: 65,
+        height: 65,
+      },
+      title: "Search",
+      description: (
+        <p>
+          In-depth agency search covering; <strong>criteria matching</strong>,
+          door knocking and due dilligence vetting.
+        </p>
+      ),
+      bgColor: "#f4f4f4",
+      width: "60%",
+      isSelected: false,
+    },
+    {
+      image: { src: "/img/cardPitchImg.png", alt: "", width: 65, height: 65 },
+      title: "Pitch",
+      description: (
+        <p>
+          Comprehensive <strong>pitch management</strong>, including comms,
+          diary management and pitch hosting.
+        </p>
+      ),
+      bgColor: "#f1f1f1",
+      width: "65%",
+      isSelected: true,
+    },
+  ],
 };
 
 export default function Home() {
@@ -20,7 +83,7 @@ export default function Home() {
       </head>
       <div>
         <Hero {...heroProps} />
-        {/** Other sections */}
+        <Agency {...agencyProps} />
       </div>
     </>
   );

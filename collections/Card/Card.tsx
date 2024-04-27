@@ -17,13 +17,13 @@ export const Card = ({ card }: Props) => {
   const { image, title, description, bgColor, width, isSelected } = card;
 
   return (
-    <StyledContainer bgColor={bgColor} isSelected={isSelected} width={width}>
+    <StyledContainer bgColor={bgColor} isselected={isSelected} width={width}>
       <StyledImageContainer>
         <Image alt="Icon" {...image} />
       </StyledImageContainer>
 
       <StyledTextContainer>
-        <StyledTitle isSelected={isSelected}>{title}</StyledTitle>
+        <StyledTitle isselected={isSelected}>{title}</StyledTitle>
         <StyledDescription>{description}</StyledDescription>
       </StyledTextContainer>
     </StyledContainer>

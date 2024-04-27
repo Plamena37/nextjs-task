@@ -6,7 +6,7 @@ import {
 } from "../../components";
 
 export const StyledContainer = styled(
-  ({ height, bgColor, width, isSelected, ...props }) => (
+  ({ height, bgColor, width, isselected, ...props }) => (
     <SectionContainer {...props} />
   )
 )`
@@ -16,8 +16,8 @@ export const StyledContainer = styled(
   width: ${({ width }) => width};
   margin-left: 0;
   border-radius: 10px;
-  border: ${({ isSelected, theme }) =>
-    isSelected ? `3px solid ${theme.main}` : "none"};
+  border: ${({ isselected, theme }) =>
+    isselected ? `3px solid ${theme.main}` : "none"};
 
   @media (max-width: 1300px) {
     width: ${({ width }) => `calc(${width} + 15%)`};
@@ -38,10 +38,10 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   font-size: 1.3rem;
   line-height: 1.2rem;
   font-weight: 700;
-  border-bottom: ${({ isSelected, theme }) =>
-    isSelected ? `2px solid ${theme.main}` : "none"};
+  border-bottom: ${({ isselected, theme }) =>
+    isselected ? `2px solid ${theme.main}` : "none"};
 
-  color: ${({ isSelected, theme }) => (isSelected ? theme.main : theme.black)};
+  color: ${({ isselected, theme }) => (isselected ? theme.main : theme.black)};
 `;
 
 export const StyledDescription = styled((props) => (

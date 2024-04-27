@@ -19,7 +19,14 @@ export const StyledContainer = styled(
   border: ${({ isSelected, theme }) =>
     isSelected ? `3px solid ${theme.main}` : "none"};
 
-  @media (max-width: 1350px) {
+  @media (max-width: 1300px) {
+    width: ${({ width }) => `calc(${width} + 15%)`};
+  }
+  @media (max-width: 1025px) {
+    width: ${({ width }) => width};
+    margin-left: 20%;
+  }
+  @media (max-width: 650px) {
     width: 80%;
     margin-left: auto;
   }

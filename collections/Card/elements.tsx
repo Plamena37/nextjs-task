@@ -17,7 +17,7 @@ export const StyledContainer = styled(
   margin-left: 0;
   border-radius: 10px;
   border: ${({ isselected, theme }) =>
-    isselected ? `3px solid ${theme.main}` : "none"};
+    isselected === "true" ? `3px solid ${theme.main}` : "none"};
 
   @media (max-width: 1300px) {
     width: ${({ width }) => `calc(${width} + 15%)`};
@@ -39,9 +39,10 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   line-height: 1.2rem;
   font-weight: 700;
   border-bottom: ${({ isselected, theme }) =>
-    isselected ? `2px solid ${theme.main}` : "none"};
+    isselected === "true" ? `2px solid ${theme.main}` : "none"};
 
-  color: ${({ isselected, theme }) => (isselected ? theme.main : theme.black)};
+  color: ${({ isselected, theme }) =>
+    isselected === "true" ? theme.main : theme.black};
 `;
 
 export const StyledDescription = styled((props) => (

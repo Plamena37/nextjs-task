@@ -11,6 +11,15 @@ import {
   StyledCardContainer,
   StyledContentContainer,
 } from "./elements";
+import { AgencyProps } from "../../utils/interfaces";
+
+// type AgencyProps = {
+//   title: string;
+//   subTitle;
+//   bgImage;
+//   videoImg;
+//   cards;
+// };
 
 export const Agency = ({
   title,
@@ -18,16 +27,15 @@ export const Agency = ({
   bgImage,
   videoImg,
   cards,
-  ...props
-}) => {
+}: AgencyProps) => {
   return (
-    <StyledContainer {...props}>
+    <StyledContainer>
       <StyledTextContainer>
         <StyledTitle>{title}</StyledTitle>
         <StyledSubheading>{subTitle}</StyledSubheading>
       </StyledTextContainer>
 
-      <StyledContentContainer {...props}>
+      <StyledContentContainer>
         <StyledImageContainer>
           <Image
             layout="responsive"
@@ -37,7 +45,7 @@ export const Agency = ({
             height={videoImg.height}
           />
         </StyledImageContainer>
-        <StyledCardContainer {...props}>
+        <StyledCardContainer>
           {cards.map((card) => (
             <Card key={card.title} card={card} />
           ))}

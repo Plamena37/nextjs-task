@@ -3,7 +3,7 @@ import {
   SectionContainer,
   SectionBigHeading,
   SectionSubheading,
-} from "~/components";
+} from "../../components";
 
 export const StyledContainer = styled(
   ({ height, bgColor, width, isSelected, ...props }) => (

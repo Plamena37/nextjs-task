@@ -1,13 +1,14 @@
 import { Hero, Agency } from "../sections";
+import { AgencyProps, HeroProps } from "../utils/interfaces";
 
-const heroProps = {
+const heroProps: HeroProps = {
   image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
   title: "Agency procurement, outsourced.",
   description: "Start the process here",
   ctaText: "Start",
 };
 
-const agencyProps = {
+const agencyProps: AgencyProps = {
   bgImage: {
     src: "/img/background.png",
     alt: "Background",

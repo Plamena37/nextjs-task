@@ -7,17 +7,17 @@ import {
   StyledTextContainer,
   StyledImageContainer,
 } from "./elements";
+import { Card as CardProps } from "../../utils/interfaces";
 
-export const Card = ({ card, ...props }) => {
+type Props = {
+  card: CardProps;
+};
+
+export const Card = ({ card }: Props) => {
   const { image, title, description, bgColor, width, isSelected } = card;
 
   return (
-    <StyledContainer
-      bgColor={bgColor}
-      isSelected={isSelected}
-      width={width}
-      {...props}
-    >
+    <StyledContainer bgColor={bgColor} isSelected={isSelected} width={width}>
       <StyledImageContainer>
         <Image alt="Icon" {...image} />
       </StyledImageContainer>

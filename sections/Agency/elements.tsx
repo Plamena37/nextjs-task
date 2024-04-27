@@ -3,9 +3,9 @@ import {
   SectionContainer,
   SectionBigHeading,
   SectionSubheading,
-} from "~/components";
+} from "../../components";
 
-export const StyledContainer = styled(({ height, ...props }) => (
+export const StyledContainer = styled(({ ...props }) => (
   <SectionContainer {...props} />
 ))`
   align-items: center;
@@ -50,7 +50,7 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   text-align: center;
 `;
 
-export const StyledContentContainer = styled(({ height, ...props }) => (
+export const StyledContentContainer = styled(({ ...props }) => (
   <SectionContainer {...props} />
 ))`
   display: grid;
@@ -79,7 +79,7 @@ export const StyledImageContainer = styled(({ ...props }) => (
   }
 `;
 
-export const StyledCardContainer = styled(({ height, ...props }) => (
+export const StyledCardContainer = styled(({ ...props }) => (
   <SectionContainer {...props} />
 ))`
   flex-direction: column;

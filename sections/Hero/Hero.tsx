@@ -9,8 +9,15 @@ import {
   StyledCTAContainer,
   StyledImageContainer,
 } from "./elements";
+import { HeroProps } from "../../utils/interfaces";
 
-export const Hero = ({ image, title, description, ctaText, ...props }) => {
+export const Hero = ({
+  image,
+  title,
+  description,
+  ctaText,
+  ...props
+}: HeroProps) => {
   return (
     <StyledContainer {...props}>
       <StyledTextContainer>
@@ -21,7 +28,13 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
         </StyledCTAContainer>
       </StyledTextContainer>
       <StyledImageContainer>
-        <Image layout="responsive" src={image.src} alt={image.alt} width={image.width} height={image.height} />
+        <Image
+          layout="responsive"
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
       </StyledImageContainer>
     </StyledContainer>
   );

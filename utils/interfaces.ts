@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface Image {
   src: string;
   alt: string;
@@ -15,7 +17,7 @@ export interface HeroProps {
 export interface Card {
   image: Image;
   title: string;
-  description: any;
+  description: React.ReactNode;
   bgColor: string;
   width: string;
   isSelected: boolean;

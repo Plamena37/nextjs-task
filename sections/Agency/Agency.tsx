@@ -13,14 +13,6 @@ import {
 } from "./elements";
 import { AgencyProps } from "../../utils/interfaces";
 
-// type AgencyProps = {
-//   title: string;
-//   subTitle;
-//   bgImage;
-//   videoImg;
-//   cards;
-// };
-
 export const Agency = ({
   title,
   subTitle,

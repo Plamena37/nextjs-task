@@ -25,7 +25,7 @@ const agencyProps: AgencyProps = {
   },
   cards: [
     {
-      image: { src: "/img/cardBriefImg.png", alt: "", width: 65, height: 65 },
+      image: { src: "/img/cardBriefImg.png", alt: "", width: 70, height: 60 },
       title: "Brief",
       description: (
         <p>
@@ -41,8 +41,8 @@ const agencyProps: AgencyProps = {
       image: {
         src: "/img/cardSearchImg.png",
         alt: "",
-        width: 65,
-        height: 65,
+        width: 70,
+        height: 60,
       },
       title: "Search",
       description: (
@@ -56,7 +56,7 @@ const agencyProps: AgencyProps = {
       isSelected: false,
     },
     {
-      image: { src: "/img/cardPitchImg.png", alt: "", width: 65, height: 65 },
+      image: { src: "/img/cardPitchImg.png", alt: "", width: 70, height: 60 },
       title: "Pitch",
       description: (
         <p>

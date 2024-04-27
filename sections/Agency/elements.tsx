@@ -90,7 +90,6 @@ export const StyledCardContainer = styled(({ ...props }) => (
 
   @media (max-width: 1024px) {
     justify-self: center;
-    gap: 1rem;
     margin-top: 2.5rem;
   }
 `;

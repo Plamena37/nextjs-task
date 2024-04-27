@@ -10,7 +10,7 @@ export const StyledContainer = styled(
     <SectionContainer {...props} />
   )
 )`
-  padding: 1rem 1rem 0.3rem;
+  padding: 1.2rem 1rem 0.3rem;
   align-items: center;
   background: ${({ bgColor }) => bgColor};
   width: ${({ width }) => width};
@@ -30,20 +30,24 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   margin: 0;
   font-size: 1.3rem;
   line-height: 1.2rem;
+  font-weight: 700;
   border-bottom: ${({ isSelected, theme }) =>
     isSelected ? `2px solid ${theme.main}` : "none"};
 
   color: ${({ isSelected, theme }) => (isSelected ? theme.main : theme.black)};
-
-  ${({ titleStyleProps }) => titleStyleProps}
 `;
 
 export const StyledDescription = styled((props) => (
   <SectionSubheading {...props} />
 ))`
-  margin: 0;
   font-size: 1rem;
   font-weight: 500;
+  line-height: 1.5rem;
+  margin-block: 0.4rem;
+
+  & > p {
+    margin: 0;
+  }
 `;
 
 export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
@@ -55,5 +59,9 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
 export const StyledImageContainer = styled(({ ...props }) => (
   <div {...props} />
 ))`
-  padding: 2rem;
+  padding: 1.8rem;
+
+  @media (max-width: 700px) {
+    padding: 1rem;
+  }
 `;

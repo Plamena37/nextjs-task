@@ -30,8 +30,8 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
     font-size: 3.1rem;
   }
   @media (max-width: 650px) {
-    font-size: 2.8rem;
-    line-height: 3.2rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
   }
 `;
 

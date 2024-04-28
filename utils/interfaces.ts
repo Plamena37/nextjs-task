@@ -20,7 +20,6 @@ export interface Card {
   description: React.ReactNode;
   bgColor: string;
   width: string;
-  isSelected: boolean;
 }
 
 export interface AgencyProps {

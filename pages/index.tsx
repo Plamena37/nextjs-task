@@ -35,7 +35,6 @@ const agencyProps: AgencyProps = {
       ),
       bgColor: "#f9f9f9",
       width: "55%",
-      isSelected: false,
     },
     {
       image: {
@@ -53,7 +52,6 @@ const agencyProps: AgencyProps = {
       ),
       bgColor: "#f4f4f4",
       width: "60%",
-      isSelected: false,
     },
     {
       image: { src: "/img/cardPitchImg.png", alt: "", width: 70, height: 60 },
@@ -66,7 +64,6 @@ const agencyProps: AgencyProps = {
       ),
       bgColor: "#f1f1f1",
       width: "65%",
-      isSelected: true,
     },
   ],
 };
@@ -83,7 +80,8 @@ export default function Home() {
         />
       </head>
       <div>
-        <Hero {...heroProps} />
+        {/* I'm commenting the Hero Section since it's breaking the layout on small devices */}
+        {/* <Hero {...heroProps} /> */}
         <Agency {...agencyProps} />
       </div>
     </>

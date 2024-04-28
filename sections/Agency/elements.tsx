@@ -29,6 +29,10 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   @media (max-width: 1024px) {
     font-size: 3.1rem;
   }
+  @media (max-width: 650px) {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
 `;
 
 export const StyledSubheading = styled((props) => (
@@ -67,8 +71,8 @@ export const StyledContentContainer = styled(({ ...props }) => (
 export const StyledImageContainer = styled(({ ...props }) => (
   <div {...props} />
 ))`
-  max-width: 100%;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   height: 100%;
   justify-self: end;
   align-content: center;
@@ -76,6 +80,7 @@ export const StyledImageContainer = styled(({ ...props }) => (
 
   @media (max-width: 1024px) {
     justify-self: center;
+    width: 50dvw;
   }
 `;
 

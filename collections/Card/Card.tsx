@@ -14,20 +14,16 @@ type Props = {
 };
 
 export const Card = ({ card }: Props) => {
-  const { image, title, description, bgColor, width, isSelected } = card;
+  const { image, title, description, bgColor, width } = card;
 
   return (
-    <StyledContainer
-      bgColor={bgColor}
-      isselected={isSelected.toString()}
-      width={width}
-    >
+    <StyledContainer bgColor={bgColor} width={width}>
       <StyledImageContainer>
         <Image alt="Icon" {...image} />
       </StyledImageContainer>
 
       <StyledTextContainer>
-        <StyledTitle isselected={isSelected.toString()}>{title}</StyledTitle>
+        <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{description}</StyledDescription>
       </StyledTextContainer>
     </StyledContainer>
